@@ -1,11 +1,16 @@
+
+$colors: (home: #D0FEF5, add: #91C4F2, rent: #4A5899, clothes: #ECB42E, health: #F84AA7, relax: #5FAD56, transport: #CF5C36, food: #FFF275, others: #ABABB0, all: #001242)
+    
 *
     margin: 0
     padding: 0
     box-sizing: border-box
 
 body
-    background-color: #333
+    min-height: 100vh
+    background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%)
     font-family: 'Roboto', sans-serif
+    overflow: hidden
 .hamburger-buttons
     position: fixed
     top: 10px
@@ -51,46 +56,46 @@ nav
     a:hover
         background-color: #fff
     .nav-home
-        background-color: #D0FEF5
+        background-color: map-get($colors,home)
     .nav-add
-        background-color: #91C4F2
+        background-color: map-get($colors,add)
     .nav-rent
-        background-color: #4A5899
+        background-color: map-get($colors,rent)
     .nav-clothes
-        background-color: #ECB42E
+        background-color: map-get($colors,clothes)
     .nav-health
-        background-color: #F84AA7
+        background-color: map-get($colors,health)
     .nav-relax
-        background-color: #5FAD56
+        background-color: map-get($colors,relax)
     .nav-transport
-        background-color: #CF5C36
+        background-color: map-get($colors,transport)
     .nav-food
-        background-color: #FFF275
+        background-color: map-get($colors,food)
     .nav-others
-        background-color: #ABABB0
+        background-color: map-get($colors,others)
     .nav-all
-        background-color: #001242
+        background-color: map-get($colors,all)
 
     .nav-home:hover
-        color: #D0FEF5
+        color: map-get($colors,home)
     .nav-add:hover
-        color: #91C4F2
+        color: map-get($colors,add)
     .nav-rent:hover
-        color: #4A5899
+        color: map-get($colors,rent)
     .nav-clothes:hover
-        color: #ECB42E
+        color: map-get($colors,clothes)
     .nav-health:hover
-        color: #F84AA7
+        color: map-get($colors,health)
     .nav-relax:hover
-        color: #5FAD56
+        color: map-get($colors,relax)
     .nav-transport:hover
-        color: #CF5C36
+        color: map-get($colors,transport)
     .nav-food:hover
-        color: #FFF275
+        color: map-get($colors,food)
     .nav-others:hover
-        color: #ABABB0
+        color: map-get($colors,others)
     .nav-all:hover
-        color: #001242
+        color: map-get($colors,all)
 
 #home
     width: 100%
@@ -126,10 +131,10 @@ nav
 
 
 .section-category
-    // position: absolute
-    // right: 100%
+    position: absolute
+    right: 100%
     height: 100vh
-    width: 100%
+    width: 100vw
     background-repeat: no-repeat
     background-size: cover
     transition: right 2s
@@ -165,7 +170,7 @@ nav
     background-color: #5c595993
 .list
     width: 90%
-    margin: 10px auto
+    margin: 20px auto
     li
         display: flex
         justify-content: space-between
@@ -201,6 +206,21 @@ nav
     border-top: none
 
 
+.all-list 
+    li:nth-of-type(1)
+        background-color: map-get($colors,rent )
+    li:nth-of-type(2)
+        background-color: map-get($colors,clothes)
+    li:nth-of-type(3)
+        background-color: map-get($colors,health)
+    li:nth-of-type(4)
+        background-color: map-get($colors,relax)
+    li:nth-of-type(5)
+        background-color: map-get($colors,transport)
+    li:nth-of-type(6)
+        background-color: map-get($colors,food)
+    li:nth-of-type(7)
+        background-color: map-get($colors,others)
 
 
 
@@ -262,3 +282,8 @@ nav
 .show-section
     display: block
     right: 0
+.hide-section
+    right: -100%
+
+
+
