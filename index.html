@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator budżetu </title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" media="screen and (min-width:575px)" href="./css/small.css">
+    <link rel="stylesheet" media="screen and (min-width:768px)" href="./css/medium.css">
+    <link rel="stylesheet" media="screen and (min-width:992px)" href="./css/large.css">
+
+    <script src="https://kit.fontawesome.com/fe2234a45c.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="hamburger-buttons">
+        <button class="hamburger"><i class="fas fa-hamburger"></i></button>
+        <button class="close-hamburger"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="wrapper">
+        <nav>
+            <a class="nav-home" href="#home"><i class="fas fa-home"></i></a>
+            <a class="nav-add" href="#add" class="nav__add"><i class="fas fa-plus"></i></a>
+            <a class="nav-rent" href="#rent"><i class="fas fa-building"></i></a>
+            <a class="nav-clothes" href="#clothes"><i class="fas fa-tshirt"></i></a>
+            <a class="nav-health" href="#health"><i class="fas fa-bath"></i></a>
+            <a class="nav-relax" href="#relax"><i class="fas fa-couch"></i></a>
+            <a class="nav-transport" href="#transport"><i class="fas fa-space-shuttle"></i></a>
+            <a class="nav-food" href="#food"><i class="fas fa-utensils"></i></a>
+            <a class="nav-others" href="#others">Inne</a>
+            <a class="nav-all" href="#all">All</a>
+        </nav>
+        <section id="home">
+            <div class="hero-img">
+                <div class="hero-txt">
+                    <h1>Kalkulator budżetu</h1>
+                    <p>zapanuj nad swoimi wydatkami</p>
+                </div>
+                <div class="hero-shadow"></div>
+            </div>
+        </section>
+        <section id="rent" class="section-category">
+            <h2 class="category-header">Czynsz, kredyt, rachunki</h2>
+            <div class="area">
+                <ul class="list rent-list">
+                    <li><p>Zakupy w reserved</p> <div class="li__rest"><span class="amount">883223 zł</span><button class="delete"><i class="far fa-trash-alt"></i></button></li>
+                    <li><p>Zakupy w reserved</p> <div class="li__rest"><span class="amount">883223 zł</span><button class="delete"><i class="fas fa-trash"></i></button></li>
+                    <li><p>Zakupy w reserved</p> <div class="li__rest"><span class="amount">883223 zł</span><button class="delete"><i class="fas fa-trash"></i></button></li>
+                </ul>
+                <p class="all-amount all-amount__rent">333 zł</p>
+            </div>
+        </section>
+
+        <section id="clothes" class="section-category">
+            <h2 class="category-header">Ubrania</h2>
+            <div class="area">
+                <ul class="list clothes-list">
+                    <li><p>Zakupy w reserved</p> <div class="li__rest"><span class="amount">883223 zł</span><button class="delete"><i class="far fa-trash-alt"></i></button></li>
+                    <li><p>Zakupy w reserved</p> <div class="li__rest"><span class="amount">883223 zł</span><button class="delete"><i class="fas fa-trash"></i></button></li>
+                    <li><p>Zakupy w reserved</p> <div class="li__rest"><span class="amount">883223 zł</span><button class="delete"><i class="fas fa-trash"></i></button></li>
+                </ul>
+                <p class="all-amount all-amount__clothes">333 zł</p>
+            </div>
+        </section>
+
+        <section id="health" class="section-category">
+            <h2 class="category-header">Zdrowie, chemia, higiena...</h2>
+            <div class="area">
+                <ul class="list health-list">
+                    <li><p>Zakupy w reserved</p> <div class="li__rest"><span class="amount">883223 zł</span><button class="delete"><i class="far fa-trash-alt"></i></button></li>
+                    <li><p>Zakupy w reserved</p> <div class="li__rest"><span class="amount">883223 zł</span><button class="delete"><i class="fas fa-trash"></i></button></li>
+                    <li><p>Zakupy w reserved</p> <div class="li__rest"><span class="amount">883223 zł</span><button class="delete"><i class="fas fa-trash"></i></button></li>
+                </ul>
+                <p class="all-amount all-amount__health">333 zł</p>
+            </div>
+        </section>
+
+        <section id="relax" class="section-category">
+            <h2 class="category-header">Relaks, hobby, kino...</h2>
+            <div class="area">
+                <ul class="list relax-list">
+                    <li><p>Zakupy w reserved</p> <div class="li__rest"><span class="amount">883223 zł</span><button class="delete"><i class="far fa-trash-alt"></i></button></li>
+                    <li><p>Zakupy w reserved</p> <div class="li__rest"><span class="amount">883223 zł</span><button class="delete"><i class="fas fa-trash"></i></button></li>
+                    <li><p>Zakupy w reserved</p> <div class="li__rest"><span class="amount">883223 zł</span><button class="delete"><i class="fas fa-trash"></i></button></li>
+                </ul>
+                <p class="all-amount all-amount__relax">333 zł</p>
+            </div>
+        </section>
+
+        <section id="transport" class="section-category">
+            <h2 class="category-header">Paliwo, bilety, transport</h2>
+            <div class="area">
+                <ul class="list transport-list">
+                    <li><p>Zakupy w reserved</p> <div class="li__rest"><span class="amount">883223 zł</span><button class="delete"><i class="far fa-trash-alt"></i></button></li>
+                    <li><p>Zakupy w reserved</p> <div class="li__rest"><span class="amount">883223 zł</span><button class="delete"><i class="fas fa-trash"></i></button></li>
+                    <li><p>Zakupy w reserved</p> <div class="li__rest"><span class="amount">883223 zł</span><button class="delete"><i class="fas fa-trash"></i></button></li>
+                </ul>
+                <p class="all-amount all-amount__transport">333 zł</p>
+            </div>
+        </section>
+
+        <section id="food" class="section-category">
+            <h2 class="category-header">Jedzenie</h2>
+            <div class="area">
+                <ul class="list food-list">
+                    <li><p>Zakupy w reserved</p> <div class="li__rest"><span class="amount">883223 zł</span><button class="delete"><i class="far fa-trash-alt"></i></button></li>
+                    <li><p>Zakupy w reserved</p> <div class="li__rest"><span class="amount">883223 zł</span><button class="delete"><i class="fas fa-trash"></i></button></li>
+                    <li><p>Zakupy w reserved</p> <div class="li__rest"><span class="amount">883223 zł</span><button class="delete"><i class="fas fa-trash"></i></button></li>
+                </ul>
+                <p class="all-amount all-amount__food">333 zł</p>
+            </div>
+        </section>
+        <section id="others" class="section-category">
+            <h2 class="category-header">Inne</h2>
+            <div class="area">
+                <ul class="list others-list">
+                    <li><p>Zakupy w reserved</p> <div class="li__rest"><span class="amount">883223 zł</span><button class="delete"><i class="far fa-trash-alt"></i></button></li>
+                    <li><p>Zakupy w reserved</p> <div class="li__rest"><span class="amount">883223 zł</span><button class="delete"><i class="fas fa-trash"></i></button></li>
+                    <li><p>Zakupy w reserved</p> <div class="li__rest"><span class="amount">883223 zł</span><button class="delete"><i class="fas fa-trash"></i></button></li>
+                </ul>
+                <p class="all-amount all-amount__others">333 zł</p>
+            </div>
+        </section>
+        <section id="all" class="section-category">
+            <ul class="list all-list">
+                <li>Czynsz, kredyt, rachunki <span>7990 zł</span></li>
+                <li>Ubrania <span>7990 zł</span></li>
+                <li>Zdrowie, chemia, higiena <span>7990 zł</span></li>
+                <li>Relaks, hobby, kino <span>7990 zł</span></li>
+                <li>Paliwo, bilety, transport <span>7990 zł</span></li>
+                <li>Jedzenie <span>7990 zł</span></li>
+                <li>Inne <span>7990 zł</span></li>
+            </ul>
+            <canvas id="myChart"></canvas>
+            <p class="all-amount all-amount__all">333 zł</p>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+        <div class="popup">
+            <h3>Dodaj wydatek</h3>
+            <form action="">
+                <input type="text" id="new-expenditure" placeholder="Wydatek">
+                <input type="number" name="number" id="number" placeholder="Kwota">
+                <input type="radio" name="category" id="checkbox-rent">
+                <label for="checkbox-rent"><i class="fas fa-building"></i>Czynsz, kredyt...</label>
+                <input type="radio" name="category" id="checkbox-clothes">
+                <label for="checkbox-clothes"><i class="fas fa-tshirt"></i>Ubrania</label>
+                <input type="radio" name="category" id="checkbox-health">
+                <label for="checkbox-health"><i class="fas fa-bath"></i>Zdrowie, chemia, higiena...</label>
+                <input type="radio" name="category" id="checkbox-relax">
+                <label for="checkbox-relax"><i class="fas fa-couch"></i>relaks, hobby, kino...</label>
+                <input type="radio" name="category" id="checkbox-transport">
+                <label for="checkbox-transport"><i class="fas fa-space-shuttle"></i>Paliwo, bilety</label>
+                <input type="radio" name="category" id="checkbox-food">
+                <label for="checkbox-food"><i class="fas fa-utensils"></i>Jedzenie</label>
+                <input type="radio" name="category" id="checkbox-other">
+                <label for="checkbox-other">Inne</label>
+            </form>
+            <div class="popup-buttons">
+                <button class="add-btn">Dodaj</button>
+                <button class="close-btn">Anuluj</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
