@@ -5,10 +5,10 @@
 }
 
 body {
+  min-width: 100vw;
   min-height: 100vh;
   background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
   font-family: 'Roboto', sans-serif;
-  overflow: hidden;
 }
 
 .hamburger-buttons {
@@ -314,6 +314,11 @@ nav .nav-all:hover {
   background-color: #ABABB0;
 }
 
+#myChart {
+  max-width: 1000px;
+  margin: 10px auto;
+}
+
 .popup {
   display: none;
   position: fixed;
@@ -338,7 +343,8 @@ nav .nav-all:hover {
   width: 5%;
   height: 20px;
   padding: 5px;
-  margin: 5px 0;
+  margin: 5px 0 0;
+  border: royalblue 1px solid;
 }
 
 .popup form label {
@@ -377,6 +383,13 @@ nav .nav-all:hover {
   background-color: #c2ec91;
 }
 
+.error {
+  margin: 0 auto;
+  font-size: 10px;
+  color: tomato;
+  visibility: hidden;
+}
+
 .show-nav {
   left: 0;
 }
@@ -392,5 +405,9 @@ nav .nav-all:hover {
 
 .hide-section {
   right: -100%;
+}
+
+.visable {
+  visibility: visible;
 }
 /*# sourceMappingURL=style.css.map */

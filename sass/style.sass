@@ -7,10 +7,10 @@ $colors: (home: #D0FEF5, add: #91C4F2, rent: #4A5899, clothes: #ECB42E, health: 
     box-sizing: border-box
 
 body
+    min-width: 100vw
     min-height: 100vh
     background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%)
-    font-family: 'Roboto', sans-serif
-    overflow: hidden
+    font-family: 'Roboto', sans-serif 
 .hamburger-buttons
     position: fixed
     top: 10px
@@ -32,6 +32,7 @@ body
     flex-direction: column
     position: relative
     margin: 0 auto
+
 
 nav
     position: fixed
@@ -222,7 +223,9 @@ nav
     li:nth-of-type(7)
         background-color: map-get($colors,others)
 
-
+#myChart
+    max-width: 1000px
+    margin: 10px auto
 
 
 .popup
@@ -246,7 +249,8 @@ nav
             width: 5%
             height: 20px
             padding: 5px 
-            margin: 5px 0
+            margin: 5px 0 0
+            border: royalblue 1px solid
         label
             width: 95%
             display: inline
@@ -261,6 +265,7 @@ nav
             width: 90%
             margin: 5px 10px 10px
             display: block
+
     button
         margin: 5px 5px
         padding: 2px 3px
@@ -271,6 +276,11 @@ nav
         font-weight: bold
     button:hover
         background-color: #c2ec91
+.error
+    margin: 0 auto
+    font-size: 10px
+    color: tomato
+    visibility: hidden
 
 .show-nav
     left: 0
@@ -285,5 +295,6 @@ nav
 .hide-section
     right: -100%
 
-
+.visable
+    visibility: visible
 
