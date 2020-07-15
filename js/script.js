@@ -20,14 +20,32 @@ const othersInp = document.querySelector('#checkbox-others')
 const allInputsLabels = [rentInp, clothesInp, healthInp, relaxInp, transportInp, foodInp, othersInp]
 
 // listy
-const rentList = document.querySelector('.rent-list')
-const clothesList = document.querySelector('.clothes-list')
-const healthList = document.querySelector('.health-list')
-const relaxList = document.querySelector('.relax-list')
-const transportList = document.querySelector('.transport-list')
-const foodList = document.querySelector('.food-list')
-const othersList = document.querySelector('.others-list')
-const allList = document.querySelector('.all-list')
+let rentList = document.querySelector('.rent-list')
+let clothesList = document.querySelector('.clothes-list')
+let healthList = document.querySelector('.health-list')
+let relaxList = document.querySelector('.relax-list')
+let transportList = document.querySelector('.transport-list')
+let foodList = document.querySelector('.food-list')
+let othersList = document.querySelector('.others-list')
+let allList = document.querySelector('.all-list')
+window.onload = function() {
+    if (JSON.parse(localStorage.getItem("rent-list")) != null)
+    rentList.innerHTML = JSON.parse(localStorage.getItem("rent-list"));
+    if (JSON.parse(localStorage.getItem("clothes-list")) != null)
+    clothesList.innerHTML = JSON.parse(localStorage.getItem("clothes-list"));
+    if (JSON.parse(localStorage.getItem("health-list")) != null)
+    healthList.innerHTML = JSON.parse(localStorage.getItem("health-list"));
+    if (JSON.parse(localStorage.getItem("relax-list")) != null)
+    relaxList.innerHTML = JSON.parse(localStorage.getItem("relax-list"));
+    if (JSON.parse(localStorage.getItem("transport-list")) != null)
+    transportList.innerHTML = JSON.parse(localStorage.getItem("transport-list"));
+    if (JSON.parse(localStorage.getItem("food-list")) != null)
+    foodList.innerHTML = JSON.parse(localStorage.getItem("food-list"));
+    if (JSON.parse(localStorage.getItem("others-list")) != null)
+    othersList.innerHTML = JSON.parse(localStorage.getItem("others-list"));
+    SumExpends()
+    chartUpdate()
+};
 
 // butony nawigacji
 const homeBtn = document.querySelector('.nav-home')
@@ -61,39 +79,75 @@ const checkInputLabels = () => {
         rentList.appendChild(newExpenditure)
         hideSection()
         rentSection.classList.add('show-section')
+        if(localStorage.getItem('rent-list')== null){
+            localStorage.setItem('rent-list', JSON.stringify(rentList.innerHTML))
+        }else{
+            localStorage.setItem('rent-list', JSON.stringify(rentList.innerHTML))
+        }
 
     } else if (clothesInp.checked) {
         newExpenditure.innerHTML = `<p>${textInp.value}</p> <div class="li__rest"><span class="clothes-amount">${numberInp.value}</span><button class="delete"><i class="far fa-trash-alt"></i></button></li>`
         clothesList.appendChild(newExpenditure)
         hideSection()
         clothesSection.classList.add('show-section')
+        if(localStorage.getItem('clothes-list')== null){
+            localStorage.setItem('clothes-list', JSON.stringify(clothesList.innerHTML))
+        }else{
+            localStorage.setItem('clothes-list', JSON.stringify(clothesList.innerHTML))
+        }
     } else if (healthInp.checked) {
         newExpenditure.innerHTML = `<p>${textInp.value}</p> <div class="li__rest"><span class="health-amount">${numberInp.value}</span><button class="delete"><i class="far fa-trash-alt"></i></button></li>`
         healthList.appendChild(newExpenditure)
         hideSection()
         healthSection.classList.add('show-section')
+        if(localStorage.getItem('health-list')== null){
+            localStorage.setItem('health-list', JSON.stringify(healthList.innerHTML))
+        }else{
+            localStorage.setItem('health-list', JSON.stringify(healthList.innerHTML))
+        }
     } else if (relaxInp.checked) {
         newExpenditure.innerHTML = `<p>${textInp.value}</p> <div class="li__rest"><span class="relax-amount">${numberInp.value}</span><button class="delete"><i class="far fa-trash-alt"></i></button></li>`
         relaxList.appendChild(newExpenditure)
         hideSection()
         relaxSection.classList.add('show-section')
+        if(localStorage.getItem('relax-list')== null){
+            localStorage.setItem('relax-list', JSON.stringify(relaxList.innerHTML))
+        }else{
+            localStorage.setItem('relax-list', JSON.stringify(relaxList.innerHTML))
+        }
     } else if (transportInp.checked) {
         newExpenditure.innerHTML = `<p>${textInp.value}</p> <div class="li__rest"><span class="transport-amount">${numberInp.value}</span><button class="delete"><i class="far fa-trash-alt"></i></button></li>`
         transportList.appendChild(newExpenditure)
         hideSection()
         transportSection.classList.add('show-section')
+        if(localStorage.getItem('transport-list')== null){
+            localStorage.setItem('transport-list', JSON.stringify(transportList.innerHTML))
+        }else{
+            localStorage.setItem('transport-list', JSON.stringify(transportList.innerHTML))
+        }
     } else if (foodInp.checked) {
         newExpenditure.innerHTML = `<p>${textInp.value}</p> <div class="li__rest"><span class="food-amount">${numberInp.value}</span><button class="delete"><i class="far fa-trash-alt"></i></button></li>`
         foodList.appendChild(newExpenditure)
         hideSection()
         foodSection.classList.add('show-section')
+        if(localStorage.getItem('food-list')== null){
+            localStorage.setItem('food-list', JSON.stringify(foodList.innerHTML))
+        }else{
+            localStorage.setItem('food-list', JSON.stringify(foodList.innerHTML))
+        }
     } else if (othersInp.checked) {
         newExpenditure.innerHTML = `<p>${textInp.value}</p> <div class="li__rest"><span class="others-amount">${numberInp.value}</span><button class="delete"><i class="far fa-trash-alt"></i></button></li>`
         othersList.appendChild(newExpenditure)
         hideSection()
         othersSection.classList.add('show-section')
+        if(localStorage.getItem('others-list')== null){
+            localStorage.setItem('others-list', JSON.stringify(othersList.innerHTML))
+        }else{
+            localStorage.setItem('others-list', JSON.stringify(othersList.innerHTML))
+        }
     }
 }
+
 
 const clearInputs = () => {
     const inputs = popup.querySelectorAll('input')
@@ -137,7 +191,8 @@ const test = () => {
 }
 
 
-
+let allAmountList = document.querySelectorAll('.all-amount')
+console.log(allAmountList)
 //wszystkie ceny wydatków w kategorii
 let amountOfRent = document.getElementsByClassName('rent-amount')
 let amountOfClothes = document.getElementsByClassName('clothes-amount')
@@ -206,7 +261,7 @@ const SumExpends = () => {
     changeToNumber(amountOfFood, pFood, AllFoodValue)
     changeToNumber(amountOfOthers, pOthers, AllOthersValue)
 }
-
+console.log(localStorage.getItem('all-amountlist'))
 function chartUpdate (){
     newData = chartArr
     chart.data.datasets[0].data = chartArr
@@ -287,6 +342,7 @@ closeBtn.addEventListener('click', () => {
 
 addBtn.addEventListener('click', ()=>{
     chartArr = []
+    test()
     addNew()
     chartUpdate()
 })
@@ -297,6 +353,13 @@ window.addEventListener('click', (e) => {
         chartArr =[]
         SumExpends()
         chartUpdate()
+        localStorage.setItem('rent-list', JSON.stringify(rentList.innerHTML))
+        localStorage.setItem('clothes-list', JSON.stringify(clothesList.innerHTML))
+        localStorage.setItem('health-list', JSON.stringify(healthList.innerHTML))
+        localStorage.setItem('relax-list', JSON.stringify(relaxList.innerHTML))
+        localStorage.setItem('transport-list', JSON.stringify(transportList.innerHTML))
+        localStorage.setItem('food-list', JSON.stringify(foodList.innerHTML))
+        localStorage.setItem('others-list', JSON.stringify(othersList.innerHTML))
     }
 })
 

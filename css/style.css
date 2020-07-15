@@ -230,6 +230,8 @@ nav .nav-all:hover {
   position: relative;
   display: flex;
   flex-direction: column;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .category-header {
