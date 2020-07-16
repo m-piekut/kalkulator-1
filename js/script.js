@@ -245,7 +245,7 @@ let changeToNumber = (x, y, z) => {
         const e= chartArr[i];
         allSum += e
     }
-    pAll.innerText = allSum
+    pAll.innerText = `${allSum} zł`
 }
 
 

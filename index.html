@@ -46,8 +46,6 @@
             <h2 class="category-header">Czynsz, kredyt, rachunki</h2>
             <div class="area">
                 <ul class="list rent-list">
-                    <li><p>Zakupy w reserved</p> <div class="li__rest"><span class="rent-amount">1</span><button class="delete"><i class="far fa-trash-alt"></i></button></li>
-                    <li><p>Zakupy w reserved</p> <div class="li__rest"><span class="rent-amount">0</span><button class="delete"><i class="fas fa-trash"></i></button></li>
                 </ul>
                 <p class="all-amount all-amount__rent">0</p>
             </div>
@@ -57,10 +55,6 @@
             <h2 class="category-header">Ubrania</h2>
             <div class="area">
                 <ul class="list clothes-list">
-                    <li><p>Zakupy w reserved</p> <div class="li__rest"><span class="clothes-amount">1</span><button class="delete"><i class="far fa-trash-alt"></i></button></li>
-                    <li><p>Zakupy w reserved</p> <div class="li__rest"><span class="clothes-amount">1</span><button class="delete"><i class="far fa-trash-alt"></i></button></li>
-                    <li><p>Zakupy w reserved</p> <div class="li__rest"><span class="clothes-amount">0</span><button class="delete"><i class="far fa-trash-alt"></i></button></li>
-                    
                 </ul>
                 <p class="all-amount all-amount__clothes">0</p>
             </div>
@@ -70,9 +64,6 @@
             <h2 class="category-header">Zdrowie, chemia, higiena...</h2>
             <div class="area">
                 <ul class="list health-list">
-                    <li><p>Zakupy w reserved</p> <div class="li__rest"><span class="health-amount">1</span><button class="delete"><i class="far fa-trash-alt"></i></button></li>
-                    <li><p>Zakupy w reserved</p> <div class="li__rest"><span class="health-amount">1</span><button class="delete"><i class="fas fa-trash"></i></button></li>
-                    <li><p>Zakupy w reserved</p> <div class="li__rest"><span class="health-amount">1</span><button class="delete"><i class="fas fa-trash"></i></button></li>
                 </ul>
                 <p class="all-amount all-amount__health">0</p>
             </div>
@@ -82,9 +73,6 @@
             <h2 class="category-header">Relaks, hobby, kino...</h2>
             <div class="area">
                 <ul class="list relax-list">
-                    <li><p>Zakupy w reserved</p> <div class="li__rest"><span class="relax-amount">2</span><button class="delete"><i class="far fa-trash-alt"></i></button></li>
-                    <li><p>Zakupy w reserved</p> <div class="li__rest"><span class="relax-amount">1</span><button class="delete"><i class="fas fa-trash"></i></button></li>
-                    <li><p>Zakupy w reserved</p> <div class="li__rest"><span class="relax-amount">1</span><button class="delete"><i class="fas fa-trash"></i></button></li>
                 </ul>
                 <p class="all-amount all-amount__relax">0</p>
             </div>
@@ -94,9 +82,6 @@
             <h2 class="category-header">Paliwo, bilety, transport</h2>
             <div class="area">
                 <ul class="list transport-list">
-                    <li><p>Zakupy w reserved</p> <div class="li__rest"><span class="transport-amount">3</span><button class="delete"><i class="far fa-trash-alt"></i></button></li>
-                    <li><p>Zakupy w reserved</p> <div class="li__rest"><span class="transport-amount">1</span><button class="delete"><i class="fas fa-trash"></i></button></li>
-                    <li><p>Zakupy w reserved</p> <div class="li__rest"><span class="transport-amount">1</span><button class="delete"><i class="fas fa-trash"></i></button></li>
                 </ul>
                 <p class="all-amount all-amount__transport">0</p>
             </div>
@@ -106,9 +91,6 @@
             <h2 class="category-header">Jedzenie</h2>
             <div class="area">
                 <ul class="list food-list">
-                    <li><p>Zakupy w reserved</p> <div class="li__rest"><span class="food-amount">4</span><button class="delete"><i class="far fa-trash-alt"></i></button></li>
-                    <li><p>Zakupy w reserved</p> <div class="li__rest"><span class="food-amount">1</span><button class="delete"><i class="fas fa-trash"></i></button></li>
-                    <li><p>Zakupy w reserved</p> <div class="li__rest"><span class="food-amount">1</span><button class="delete"><i class="fas fa-trash"></i></button></li>
                 </ul>
                 <p class="all-amount all-amount__food">0</p>
             </div>
@@ -117,9 +99,6 @@
             <h2 class="category-header">Inne</h2>
             <div class="area">
                 <ul class="list others-list">
-                    <li><p>Zakupy w reserved</p> <div class="li__rest"><span class="others-amount">5</span><button class="delete"><i class="far fa-trash-alt"></i></button></li>
-                    <li><p>Zakupy w reserved</p> <div class="li__rest"><span class="others-amount">1</span><button class="delete"><i class="fas fa-trash"></i></button></li>
-                    <li><p>Zakupy w reserved</p> <div class="li__rest"><span class="others-amount">1</span><button class="delete"><i class="fas fa-trash"></i></button></li>
                 </ul>
                 <p class="all-amount all-amount__others">0</p>
             </div>
@@ -155,7 +134,7 @@
             <h3>Dodaj wydatek</h3>
             <form action="">
                 <input type="text" id="new-expenditure" placeholder="Wydatek">
-                <input type="number" name="number" id="number" placeholder="Kwota w zł">
+                <input type="number" name="number" id="number" placeholder="Kwota w zł" step=".01">
                 <input type="radio" name="category" id="checkbox-rent">
                 <label for="checkbox-rent"><i class="fas fa-building"></i>Czynsz, kredyt...</label>
                 <input type="radio" name="category" id="checkbox-clothes">

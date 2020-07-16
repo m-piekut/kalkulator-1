@@ -388,6 +388,10 @@ nav .nav-all:hover {
   background-color: #c2ec91;
 }
 
+.popup .close-btn:hover {
+  background-color: tomato;
+}
+
 .error {
   margin: 0 auto;
   font-size: 10px;
