@@ -197,9 +197,12 @@ nav .nav-all:hover {
   transition: right 2s;
 }
 
+#rent, #clothes, #health, #relax, #transport, #food #others {
+  background-position: center;
+}
+
 #rent {
   background-image: url("../img/kitchen-small.jpg");
-  animation: show-section 4s;
 }
 
 #clothes {

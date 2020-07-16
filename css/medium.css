@@ -1,4 +1,36 @@
 body {
   background-color: tomato;
 }
+
+.hero-img {
+  background-image: url("../img/medium-house-366927_1280.jpg");
+}
+
+#rent {
+  background-image: url("../img/kitchen-medium.jpg");
+}
+
+#clothes {
+  background-image: url("../img/shopping-mall-medium.jpg");
+}
+
+#health {
+  background-image: url("../img/lavender-medium.jpg");
+}
+
+#relax {
+  background-image: url("../img/thailand-medium.jpg");
+}
+
+#transport {
+  background-image: url("../img/underground-medium.jpg");
+}
+
+#food {
+  background-image: url("../img/shopping-medium.jpg");
+}
+
+#others {
+  background-image: url("../img/others-medium.jpg");
+}
 /*# sourceMappingURL=medium.css.map */

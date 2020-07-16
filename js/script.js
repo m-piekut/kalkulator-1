@@ -162,7 +162,7 @@ const clearInputs = () => {
 
 
 const checkInputs = () => {
-    if (textInp.value !== '' && numberInp.value !== '') {
+    if (textInp.value !== '' && numberInp.value !== '' && !(popupError.classList.contains('visable'))) {
         checkInputLabels()
 
     }

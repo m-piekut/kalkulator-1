@@ -10,4 +10,36 @@ body {
     display: none;
   }
 }
+
+.hero-img {
+  background-image: url("../img/big-house-366927_1920.jpg");
+}
+
+#rent {
+  background-image: url("../img/kitchen-large.jpg");
+}
+
+#clothes {
+  background-image: url("../img/shopping-mall-large.jpg");
+}
+
+#health {
+  background-image: url("../img/lavender-large.jpg");
+}
+
+#relax {
+  background-image: url("../img/thailand-large.jpg");
+}
+
+#transport {
+  background-image: url("../img/underground-large.jpg");
+}
+
+#food {
+  background-image: url("../img/shopping-large.jpg");
+}
+
+#others {
+  background-image: url("../img/others-large.jpg");
+}
 /*# sourceMappingURL=large.css.map */
